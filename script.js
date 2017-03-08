@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    var answer=22;
-    $("button").click(function(){
+    var answer=Math.floor(Math.random() * 10);
+    $("#click").click(function(){
         var person = $("#password").val();
         person=parseInt(person)
      if (person>answer) {
@@ -15,6 +15,12 @@ $(document).ready(function(){
         else{
            $("div").append("what you typed is not a number."); 
         }
+        
+    });
+    $("#reset").click(function(){
+        answer=Math.floor(Math.random() * 10);
+        $("div").empty(); 
     });
 });
+
 
