@@ -1,6 +1,8 @@
 $(document).ready(function(){
     var answer=Math.floor(Math.random() * 10);
+    var guesses=3;
     $("#click").click(function(){
+        guesses=guesses-1;
         var person = $("#password").val();
         person=parseInt(person)
      if (person>answer) {
@@ -20,7 +22,9 @@ $(document).ready(function(){
     $("#reset").click(function(){
         answer=Math.floor(Math.random() * 10);
         $("div").empty(); 
+        
     });
+    
 });
 
 
